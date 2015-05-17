@@ -1,0 +1,14 @@
+/*
+ * palindrome.cpp
+ *
+ *  Created on: May 7, 2015
+ *      Author: will
+ */
+
+#include <stdio.h>
+#include <iostream>
+#include<algorithm>
+
+using namespace std;
+
+

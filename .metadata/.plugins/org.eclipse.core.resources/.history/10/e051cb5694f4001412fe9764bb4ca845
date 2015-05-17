@@ -1,0 +1,36 @@
+/*
+ * strstr.cpp
+ *
+ *  Created on: May 7, 2015
+ *      Author: will
+ */
+#include <stdio.h>
+#include <iostream>
+#include<algorithm>
+
+using namespace std;
+
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        int len1=haystack.length(), len2=needle.length();
+        if(len1<len2||len2==0)
+        	return -1;
+
+    	return -1;
+    }
+};
+
+int main()
+{
+    Solution ss ;
+    string s="i ,ama i1" ;
+    int result =false;
+
+    result= ss.strStr(s,s);
+    cout << "result=" << result <<endl;
+    return 0;
+}
+
+
+

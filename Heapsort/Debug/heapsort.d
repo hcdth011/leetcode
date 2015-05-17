@@ -1,0 +1,1 @@
+heapsort.d: ../heapsort.cpp

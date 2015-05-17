@@ -1,0 +1,32 @@
+20:40:48 **** Build of configuration Debug for project kmeans ****
+make all 
+Building file: ../kmeans.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"kmeans.d" -MT"kmeans.d" -o "kmeans.o" "../kmeans.cpp"
+../kmeans.cpp: In function ‘float getVar(std::vector<Tuple>*, Tuple*)’:
+../kmeans.cpp:49:20: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (int j = 0; j< t.size(); j++)
+                    ^
+../kmeans.cpp: In function ‘void KMeans(std::vector<Tuple>)’:
+../kmeans.cpp:87:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(i=0;i!=tuples.size();++i){
+           ^
+../kmeans.cpp:95:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for (i = 0; i< t.size(); i++)
+                ^
+../kmeans.cpp:118:12: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(i=0;i!=tuples.size();++i){
+            ^
+../kmeans.cpp:126:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (i = 0; i< t.size(); i++)
+                 ^
+Finished building: ../kmeans.cpp
+ 
+Building target: kmeans
+Invoking: GCC C++ Linker
+g++  -o "kmeans"  ./kmeans.o   
+Finished building target: kmeans
+ 
+
+20:40:49 Build Finished (took 1s.526ms)
+

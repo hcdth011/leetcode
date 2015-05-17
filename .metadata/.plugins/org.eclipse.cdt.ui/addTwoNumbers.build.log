@@ -1,0 +1,15 @@
+11:14:13 **** Incremental Build of configuration Debug for project addTwoNumbers ****
+make all 
+Building file: ../addTwoNumbers.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"addTwoNumbers.d" -MT"addTwoNumbers.d" -o "addTwoNumbers.o" "../addTwoNumbers.cpp"
+Finished building: ../addTwoNumbers.cpp
+ 
+Building target: addTwoNumbers
+Invoking: GCC C++ Linker
+g++  -o "addTwoNumbers"  ./addTwoNumbers.o   
+Finished building target: addTwoNumbers
+ 
+
+11:14:13 Build Finished (took 414ms)
+

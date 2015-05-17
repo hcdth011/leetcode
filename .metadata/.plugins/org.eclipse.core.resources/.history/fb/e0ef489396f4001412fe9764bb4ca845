@@ -1,0 +1,50 @@
+/*
+ * strstr.cpp
+ *
+ *  Created on: May 7, 2015
+ *      Author: will
+ */
+#include <stdio.h>
+#include <iostream>
+#include<algorithm>
+
+using namespace std;
+//暴力枚举法
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        int len1=haystack.length(), len2=needle.length();
+        if(len1<len2||len2==0)
+        	return -1;
+        int j=0,pt=0;
+        for(int i=0;i<len1;i++)
+        {
+             j=0;
+             pt=i;
+             while(j<len2&&pt<len1)
+             {
+            	if(haystack[pt++]!=needle[j++])
+            		break;
+            	else if(j==len2)
+            	{
+            		return i;
+            	}
+             }
+        }
+    	return -1;
+    }
+};
+
+int main()
+{
+    Solution ss ;
+    string s1="123hello" ,s2="llo";
+    int result =false;
+
+    result= ss.strStr(s1,s2);
+    cout << "result=" << result <<endl;
+    return 0;
+}
+
+
+

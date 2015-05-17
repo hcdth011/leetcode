@@ -1,0 +1,1 @@
+kmeans.d: ../kmeans.cpp

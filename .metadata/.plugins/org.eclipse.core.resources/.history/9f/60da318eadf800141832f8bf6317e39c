@@ -1,0 +1,62 @@
+/*
+ * anagrams.cpp
+ *
+ *  Created on: May 12, 2015
+ *      Author: will
+ */
+
+#include <stdio.h>
+#include <iostream>
+#include<algorithm>
+#include <string.h>
+#include <vector>
+#include <tr1/unordered_map>
+
+using namespace std;
+using namespace std::tr1;
+
+class Solution {
+public:
+    vector<string> anagrams(vector<string>& strs) {
+
+    	unordered_map<string,vector<string>> groups;
+    	for(auto s:strs)
+    	{
+    		string key =s;
+    		sort(key.begin(),key.end());
+    		groups[key].push_back(s);
+    	}
+    	vector<string> result;
+
+    	for(auto it=groups.begin();it!=groups.end();it++)
+    	{
+             if(it->second.size()>1)
+             {
+            	 result.insert(result.end(),it->second.begin(),it->second.end());
+             }
+    	}
+
+    	return result;
+
+    }
+};
+
+int main()
+{
+   Solution s;
+   vector<string> result;
+   vector<string> input;
+   input.insert(input.end(),"tea");
+   input.insert(input.end(),"eat");
+   input.insert(input.end(),"ate");
+   input.insert(input.end(),"and");
+   input.insert(input.end(),"den");
+
+   result=s.anagrams(input);
+
+   cout<< "result= " << result <<endl;
+  return 0;
+}
+
+
+

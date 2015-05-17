@@ -1,0 +1,1 @@
+maxSubArray.d: ../maxSubArray.cpp

@@ -1,0 +1,34 @@
+/*
+ * countandsay.cpp
+ *
+ *  Created on: May 13, 2015
+ *      Author: will
+ */
+#include <stdio.h>
+#include <iostream>
+#include<algorithm>
+#include <string>
+#include <sstream>
+#include <vector>
+using namespace std;
+
+class Solution {
+public:
+    string countAndSay(int n) {
+
+    }
+};
+
+int main()
+{
+  Solution s;
+  string ss="/a/./b/../../c/";
+  cout<< "ss=" <<ss <<endl;
+  string res=s.countAndSay(ss);
+  cout<< "res=" <<res <<endl;
+  return 0;
+}
+
+
+
+

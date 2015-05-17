@@ -1,0 +1,44 @@
+/*
+ * SimplifyPath.cpp
+ *
+ *  Created on: May 12, 2015
+ *      Author: will
+ */
+/*
+ * lastwordlen.cpp
+ *
+ *  Created on: May 12, 2015
+ *      Author: will
+ */
+
+#include <stdio.h>
+#include <iostream>
+#include<algorithm>
+#include <string.h>
+#include <vector>
+using namespace std;
+
+class Solution {
+public:
+	string simplifyPath(string path){
+      vector<string> result;
+
+    }
+};
+
+int main()
+{
+  Solution s;
+  string ss="a  b  ";
+  string res=s.simplifyPath(ss);
+  cout<< "res=" <<res <<endl;
+  return 0;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+10:58:19 **** Incremental Build of configuration Debug for project EmptyClass ****
+make all 
+make: Nothing to be done for 'all'.
+
+10:58:19 Build Finished (took 109ms)
+

@@ -1,0 +1,56 @@
+/*
+ * SimplifyPath.cpp
+ *
+ *  Created on: May 12, 2015
+ *      Author: will
+ */
+/*
+ * lastwordlen.cpp
+ *
+ *  Created on: May 12, 2015
+ *      Author: will
+ */
+
+#include <stdio.h>
+#include <iostream>
+#include<algorithm>
+#include <string.h>
+using namespace std;
+
+class Solution {
+public:
+    int SimplifyPath(string s) {
+        int len=0;
+        int temp=0; //用来保留上一次len的非0值
+        for(int i=0; i<s.length();i++)
+        {
+            if(s[i]!=' ')
+            {
+            	 len++;
+            	 temp=len;
+            }
+
+            else if(s[i]==' ')
+               len=0;
+        }
+        return len==0?temp:len;
+
+    }
+};
+
+int main()
+{
+  Solution s;
+  string ss="a  b  ";
+  int res=s.SimplifyPath(ss);
+  cout<< "res=" <<res <<endl;
+  return 0;
+}
+
+
+
+
+
+
+
+

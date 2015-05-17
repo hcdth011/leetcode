@@ -1,0 +1,1 @@
+lastwordlen.d: ../lastwordlen.cpp

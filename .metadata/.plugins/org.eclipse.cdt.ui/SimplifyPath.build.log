@@ -1,0 +1,53 @@
+17:28:52 **** Incremental Build of configuration Debug for project SimplifyPath ****
+make all 
+Building file: ../SimplifyPath.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"SimplifyPath.d" -MT"SimplifyPath.d" -o "SimplifyPath.o" "../SimplifyPath.cpp"
+../SimplifyPath.cpp: In member function ‘std::string Solution::simplifyPath(std::string)’:
+../SimplifyPath.cpp:85:7: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for(auto i=path.begin();i!=path.end();)
+       ^
+../SimplifyPath.cpp:85:12: error: ‘i’ does not name a type
+   for(auto i=path.begin();i!=path.end();)
+            ^
+../SimplifyPath.cpp:85:27: error: expected ‘;’ before ‘i’
+   for(auto i=path.begin();i!=path.end();)
+                           ^
+../SimplifyPath.cpp:85:27: error: ‘i’ was not declared in this scope
+../SimplifyPath.cpp:88:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+    auto j=find(i,path.end(),'/');
+    ^
+../SimplifyPath.cpp:88:9: error: ‘j’ does not name a type
+    auto j=find(i,path.end(),'/');
+         ^
+../SimplifyPath.cpp:89:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+    auto dir=string(i,j);
+    ^
+../SimplifyPath.cpp:89:9: error: ‘dir’ does not name a type
+    auto dir=string(i,j);
+         ^
+../SimplifyPath.cpp:91:8: error: ‘dir’ was not declared in this scope
+    if(!dir.empty()&&dir!=".")
+        ^
+../SimplifyPath.cpp:103:6: error: ‘j’ was not declared in this scope
+    i=j;
+      ^
+../SimplifyPath.cpp:111:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+    for(auto dir:dirs)
+        ^
+../SimplifyPath.cpp:111:13: error: ‘dir’ does not name a type
+    for(auto dir:dirs)
+             ^
+../SimplifyPath.cpp:113:3: error: expected ‘;’ before ‘}’ token
+   }
+   ^
+../SimplifyPath.cpp:113:3: error: expected primary-expression before ‘}’ token
+../SimplifyPath.cpp:113:3: error: expected ‘;’ before ‘}’ token
+../SimplifyPath.cpp:113:3: error: expected primary-expression before ‘}’ token
+../SimplifyPath.cpp:113:3: error: expected ‘)’ before ‘}’ token
+../SimplifyPath.cpp:113:3: error: expected primary-expression before ‘}’ token
+subdir.mk:18: recipe for target 'SimplifyPath.o' failed
+make: *** [SimplifyPath.o] Error 1
+
+17:28:52 Build Finished (took 372ms)
+

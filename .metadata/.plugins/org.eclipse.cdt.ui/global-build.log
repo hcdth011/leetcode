@@ -1,0 +1,19 @@
+23:21:17 **** Incremental Build of configuration Debug for project lastWordLen ****
+make all 
+Building file: ../lastwordlen.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lastwordlen.d" -MT"lastwordlen.d" -o "lastwordlen.o" "../lastwordlen.cpp"
+../lastwordlen.cpp: In member function ‘int Solution::lengthOfLastWord(std::string)’:
+../lastwordlen.cpp:19:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for(int i=0; i<s.length();i++)
+                       ^
+Finished building: ../lastwordlen.cpp
+ 
+Building target: lastWordLen
+Invoking: GCC C++ Linker
+g++  -o "lastWordLen"  ./lastwordlen.o   
+Finished building target: lastWordLen
+ 
+23:21:19 **** Incremental Build of configuration Debug for project lastWordLen ****
+make all 
+make: Nothing to be done for 'all'.

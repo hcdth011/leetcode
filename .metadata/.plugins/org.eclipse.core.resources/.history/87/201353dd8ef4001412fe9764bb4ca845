@@ -1,0 +1,35 @@
+/*
+ * palindrome.cpp
+ *
+ *  Created on: May 7, 2015
+ *      Author: will
+ */
+
+#include <stdio.h>
+#include <iostream>
+#include<algorithm>
+
+using namespace std;
+
+
+class Solution
+{
+public:
+	  bool isPalindrome(string s)
+	  {
+		 int len= s.length();
+		 cout<< "len=" << len << endl;
+	     return true;
+	  }
+
+};
+int main()
+{
+    Solution ss ;
+    string s="i am i" ;
+    ss.isPalindrome(s);
+
+    return 0;
+}
+
+

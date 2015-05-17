@@ -1,0 +1,1 @@
+empty.d: ../empty.cpp

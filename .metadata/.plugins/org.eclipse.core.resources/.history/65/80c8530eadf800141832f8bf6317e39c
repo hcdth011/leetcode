@@ -1,0 +1,45 @@
+/*
+ * anagrams.cpp
+ *
+ *  Created on: May 12, 2015
+ *      Author: will
+ */
+
+#include <stdio.h>
+#include <iostream>
+#include<algorithm>
+#include <string.h>
+#include <vector>
+#include <tr1/unordered_map>
+
+using namespace std;
+using namespace std::tr1;
+
+class Solution {
+public:
+    vector<string> anagrams(vector<string>& strs) {
+
+    	unordered_map<string,vector<string>> groups;
+    	for(auto s:strs)
+    	{
+    		string key =s;
+    		sort(key.begin(),key.end());
+    		groups[key].push_back(s);
+    	}
+    	vector<string> result;
+
+    	for(auto it=groups.begin();it!=groups.end();it++)
+    	{
+
+    	}
+
+    }
+};
+
+int main()
+{
+  return 0;
+}
+
+
+

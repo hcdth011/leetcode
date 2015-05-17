@@ -1,0 +1,57 @@
+/*
+ * palindrome.cpp
+ *
+ *  Created on: May 7, 2015
+ *      Author: will
+ */
+
+#include <stdio.h>
+#include <iostream>
+#include<algorithm>
+
+using namespace std;
+
+
+class Solution
+{
+public:
+	  bool isPalindrome(string s)
+	  {
+		 int len= s.length();
+		// cout<< "len=" << len << endl;
+		 if(len<2)
+			 return true;
+		 int begin=0 ,end =len-1;
+		 while(begin<end)
+		 {
+			  if('a'<s[begin]<'z'||'A'<s[begin]<'Z')
+				  ;
+			  else
+				  begin ++ ;
+			  if('a'<s[end]<'z'||'A'<s[end]<'Z')
+			  	  ;
+			  else
+			  	  end --  ;
+
+			  if(s[begin]!=s[end])
+				  return false ;
+			  begin++;
+			  end--;
+		 }
+
+	     return true;
+	  }
+
+};
+int main()
+{
+    Solution ss ;
+    string s="i m i" ;
+    bool result =false;
+
+    result= ss.isPalindrome(s);
+    cout << "result=" << result <<endl;
+    return 0;
+}
+
+

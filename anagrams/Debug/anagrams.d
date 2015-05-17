@@ -1,0 +1,1 @@
+anagrams.d: ../anagrams.cpp

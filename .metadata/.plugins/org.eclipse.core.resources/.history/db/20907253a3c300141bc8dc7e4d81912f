@@ -1,0 +1,98 @@
+#include<stdio.h>
+#include<iostream>
+#include <stdlib.h>
+using namespace std;
+
+typedef struct ListNode {
+  int val;
+  ListNode *next;
+  //ListNode(int x) : val(x), next(NULL) {}
+}Node;
+
+
+class Solution {
+public:
+    ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
+        ListNode *result;
+        ListNode *L1;
+        ListNode *L2;
+        ListNode *Res ,*opt;
+        int carry=0,num=0;
+        L1=(*l1).next;
+        L2=(*l2).next;
+       // Res=result;
+        result=(ListNode *)malloc(sizeof(ListNode)); //申请新节点
+        result->next=(ListNode *)malloc(sizeof(ListNode)); //申请新节点
+        opt= result ;
+        while( L1 != NULL && L2 !=NULL )
+        {
+
+        	Res=(ListNode *)malloc(sizeof(ListNode)); //申请新节点
+
+            num= (*L1).val +(*L2).val ;
+            (*Res).val = num%10 + carry ;
+            carry= num /10 ;
+            opt->next =Res;
+            opt = opt->next ;
+            L1 = (*L1).next ;
+            L2 = (*L2).next ;
+          //  Res = (*Res).next ;
+        }
+
+        while(L1 != NULL)
+        {
+        	//opt = opt->next ;
+        	Res=(ListNode *)malloc(sizeof(ListNode)); //申请新节点
+
+            num= (*L1).val ;
+            (*Res).val = (num + carry)%10 ;
+            carry= (num + carry) /10 ;
+
+            opt->next =Res;
+            opt = opt->next ;
+
+            L1 = (*L1).next ;
+
+        }
+
+        while(L2 != NULL)
+        {
+        	//opt = opt->next ;
+        	Res=(ListNode *)malloc(sizeof(ListNode)); //申请新节点
+            num= (*L2).val ;
+            (*Res).val = (num + carry)%10 ;
+            carry= (num + carry) /10 ;
+
+            L2 = (*L2).next ;
+            opt->next =Res;
+            opt = opt->next ;
+        }
+        opt->next->val = carry ;
+        return result ;
+    }
+};
+
+int main()
+{
+	ListNode *l1;
+	ListNode *l2;
+	ListNode *result;
+	ListNode *da1;
+	ListNode *da2;
+	cout<< "hello1"<<endl;
+	l1=(ListNode *)malloc(sizeof(ListNode)); //申请新节点
+	l2=(ListNode *)malloc(sizeof(ListNode)); //申请新节点
+	da1=(ListNode *)malloc(sizeof(ListNode)); //申请新节点
+	da1->val= 5 ;
+	da2=(ListNode *)malloc(sizeof(ListNode)); //申请新节点
+    da2->val= 5 ;
+
+	l1->next = da1 ;
+	l2->next = da2 ;
+	Solution add;
+	result= add.addTwoNumbers(l1,l2);
+	cout<< "hello2"<<endl;
+	cout<< "result= " << result->next->val << result->val <<endl;
+	return 1 ;
+}
+

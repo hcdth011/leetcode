@@ -1,0 +1,72 @@
+/*
+ * SimplifyPath.cpp
+ *
+ *  Created on: May 12, 2015
+ *      Author: will
+ */
+/*
+ * lastwordlen.cpp
+ *
+ *  Created on: May 12, 2015
+ *      Author: will
+ */
+
+#include <stdio.h>
+#include <iostream>
+#include<algorithm>
+#include <string.h>
+#include <vector>
+using namespace std;
+
+class Solution {
+public:
+	string simplifyPath(string path){
+      vector<string> result;
+      for(int i=0;i<path.length();i++)
+      {
+    	  if(path[i]!='.')
+    	  {
+    		  if(!result.empty())
+    		  {
+    			  string temp=result.pop_back();
+    			  if(temp=='/'&&path[i]=='/')
+    			     continue;
+    			  else
+    			  {
+    				  result.push_back(temp);
+    				  result.push_back((string)path[i]);
+    			  }
+    		  }
+    		  else
+    		  {
+    			  result.push_back((string)path[i]);
+    		  }
+    	  }
+    	  else
+    	  {
+    		  i++; //一个'.'就当没有，直接往后
+    		  if(path[i]=='.') //看是不是第二个还是'.'
+    		  {
+
+    		  }
+    	  }
+      }
+    }
+};
+
+int main()
+{
+  Solution s;
+  string ss="a  b  ";
+  string res=s.simplifyPath(ss);
+  cout<< "res=" <<res <<endl;
+  return 0;
+}
+
+
+
+
+
+
+
+

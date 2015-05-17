@@ -1,0 +1,73 @@
+#include<stdio.h>
+#include<iostream>
+
+using namespace std;
+
+typedef struct ListNode {
+  int val;
+  ListNode *next;
+  //ListNode(int x) : val(x), next(NULL) {}
+}Node;
+
+
+class Solution {
+public:
+    ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
+        ListNode *result;
+        ListNode *L1;
+        ListNode *L2;
+        ListNode *Res;
+        int carry=0,num=0;
+        L1=(*l1).next;
+        L2=(*l2).next;
+        Res=result;
+        while( L1 != NULL && L2 !=NULL )
+        {
+            num= (*L1).val +(*L2).val ;
+            (*Res).val = num%10 + carry ;
+            carry= num /10 ;
+
+            L1 = (*L1).next ;
+            L2 = (*L2).next ;
+            Res = (*Res).next ;
+        }
+
+        while(L1 != NULL)
+        {
+            num= (*L1).val ;
+            (*Res).val = (num + carry)%10 ;
+            carry= (num + carry) /10 ;
+
+            L1 = (*L1).next ;
+            Res = (*Res).next ;
+        }
+
+        while(L2 != NULL)
+        {
+            num= (*L2).val ;
+            (*Res).val = (num + carry)%10 ;
+            carry= (num + carry) /10 ;
+
+            L2 = (*L2).next ;
+            Res = (*Res).next ;
+        }
+
+        return result ;
+    }
+};
+
+int main()
+{
+	ListNode *l1;
+	ListNode *l2;
+	ListNode *result;
+	cout<< "hello1"<<endl;
+	l1->val=4;
+	l2->val=5;
+	Solution add;
+	result= add.addTwoNumbers(l1,l2);
+	cout<< "hello2"<<endl;
+	cout<< "result= " << result->val <<endl;
+	return 1 ;
+}
+

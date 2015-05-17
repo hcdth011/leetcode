@@ -1,0 +1,20 @@
+/*
+ * LinkList.h
+ *
+ *  Created on: Mar 5, 2015
+ *      Author: will
+ */
+
+#ifndef LINKLIST_H_
+#define LINKLIST_H_
+
+#define  DataTye int
+typedef struct Node
+{
+  DataType data;
+  struct Node *next;
+}
+
+
+
+#endif /* LINKLIST_H_ */

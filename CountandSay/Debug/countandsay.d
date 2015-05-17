@@ -1,0 +1,1 @@
+countandsay.d: ../countandsay.cpp
